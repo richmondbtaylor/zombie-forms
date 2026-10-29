@@ -1,0 +1,82 @@
+{
+  "forms": [
+    {
+      "id": "2001",
+      "title": "Customer feedback",
+      "description": "Tell Sunrise Bakery how we did. It takes one minute.",
+      "createdAt": "2026-10-01",
+      "accent": "#b8651b",
+      "thankYou": "Thanks! Your note goes straight to the bakers. See you at the counter.",
+      "questions": [
+        { "id": "q1", "type": "short", "label": "Your name", "required": true, "options": [] },
+        { "id": "q2", "type": "email", "label": "Your email", "required": false, "options": [] },
+        { "id": "q3", "type": "rating", "label": "How was your order?", "required": true, "options": [] },
+        { "id": "q4", "type": "choice", "label": "How did you hear about us?", "required": false, "options": ["Friend", "Instagram", "Walked by", "Google"] },
+        { "id": "q5", "type": "long", "label": "Anything we should change?", "required": false, "options": [] }
+      ]
+    },
+    {
+      "id": "2002",
+      "title": "Yoga workshop RSVP",
+      "description": "Saturday workshop at Bright Yoga Studio.",
+      "createdAt": "2026-10-12",
+      "accent": "#2f8f6b",
+      "thankYou": "You are on the list. We will see you on the mat on Saturday.",
+      "questions": [
+        { "id": "q1", "type": "short", "label": "Full name", "required": true, "options": [] },
+        { "id": "q2", "type": "email", "label": "Email", "required": true, "options": [] },
+        { "id": "q3", "type": "choice", "label": "Experience level", "required": true, "options": ["Beginner", "Some experience", "Advanced"] }
+      ]
+    },
+    {
+      "id": "2003",
+      "title": "Newsletter signup",
+      "description": "Get one short email a month.",
+      "createdAt": "2026-10-20",
+      "accent": "#4b36d9",
+      "thankYou": "Thank you! Your answers were sent.",
+      "questions": [
+        { "id": "q1", "type": "email", "label": "Your email", "required": true, "options": [] }
+      ]
+    },
+    {
+      "id": "2004",
+      "title": "Dog grooming visit survey",
+      "description": "Help Reyes Dog Grooming make the next visit better.",
+      "createdAt": "2026-10-22",
+      "accent": "#c2417a",
+      "thankYou": "Thank you! Give your pup a treat from us.",
+      "questions": [
+        { "id": "q1", "type": "short", "label": "Dog's name", "required": true, "options": [] },
+        { "id": "q2", "type": "rating", "label": "How did the haircut turn out?", "required": true, "options": [] },
+        { "id": "q3", "type": "rating", "label": "How was the wait time?", "required": false, "options": [] },
+        { "id": "q4", "type": "choice", "label": "Which service did you book?", "required": true, "options": ["Bath", "Full groom", "Nail trim", "Puppy first visit"] },
+        { "id": "q5", "type": "long", "label": "Tell us more", "required": false, "options": [] }
+      ]
+    }
+  ],
+  "responses": [
+    { "id": "3001", "formId": "2001", "submittedAt": "2026-10-02T14:10:00Z", "answers": { "q1": "Maria Lopez", "q2": "maria@example.com", "q3": 5, "q4": "Friend", "q5": "Love the guava pastries." } },
+    { "id": "3002", "formId": "2001", "submittedAt": "2026-10-03T09:30:00Z", "answers": { "q1": "Sam Carter", "q2": "sam@example.com", "q3": 4, "q4": "Instagram", "q5": "" } },
+    { "id": "3003", "formId": "2001", "submittedAt": "2026-10-05T17:45:00Z", "answers": { "q1": "Priya Shah", "q2": "priya@example.com", "q3": 3, "q4": "Walked by", "q5": "Open earlier on Sundays please." } },
+    { "id": "3004", "formId": "2001", "submittedAt": "2026-10-08T11:00:00Z", "answers": { "q1": "Tom Nguyen", "q2": "", "q3": 5, "q4": "Google", "q5": "" } },
+    { "id": "3005", "formId": "2001", "submittedAt": "2026-10-09T16:20:00Z", "answers": { "q1": "Ana Rivera", "q2": "ana@example.com", "q3": 4, "q4": "Instagram", "q5": "More vegan options." } },
+    { "id": "3006", "formId": "2001", "submittedAt": "2026-10-15T08:05:00Z", "answers": { "q1": "Leo Brown", "q2": "leo@example.com", "q3": 2, "q4": "Friend", "q5": "My order was late." } },
+    { "id": "3007", "formId": "2001", "submittedAt": "2026-10-21T13:40:00Z", "answers": { "q1": "Dana Kim", "q2": "dana@example.com", "q3": 5, "q4": "Instagram", "q5": "" } },
+    { "id": "3010", "formId": "2001", "submittedAt": "2026-10-23T10:15:00Z", "answers": { "q1": "Omar Haddad", "q2": "omar@example.com", "q3": 5, "q4": "Google", "q5": "Best cafe con leche in the neighborhood." } },
+    { "id": "3011", "formId": "2001", "submittedAt": "2026-10-24T18:50:00Z", "answers": { "q1": "Grace Lee", "q2": "", "q3": 4, "q4": "Walked by", "q5": "" } },
+    { "id": "3012", "formId": "2001", "submittedAt": "2026-10-26T12:05:00Z", "answers": { "q1": "Marco Diaz", "q2": "marco@example.com", "q3": 1, "q4": "Friend", "q5": "Wrong cake in the box. Please check orders twice." } },
+    { "id": "3013", "formId": "2001", "submittedAt": "2026-10-28T15:30:00Z", "answers": { "q1": "Jess Walker", "q2": "jess@example.com", "q3": 5, "q4": "Instagram", "q5": "The birthday cake was perfect." } },
+    { "id": "3008", "formId": "2002", "submittedAt": "2026-10-13T10:00:00Z", "answers": { "q1": "Priya Shah", "q2": "priya@example.com", "q3": "Advanced" } },
+    { "id": "3009", "formId": "2002", "submittedAt": "2026-10-14T19:25:00Z", "answers": { "q1": "Maria Lopez", "q2": "maria@example.com", "q3": "Beginner" } },
+    { "id": "3014", "formId": "2002", "submittedAt": "2026-10-16T08:40:00Z", "answers": { "q1": "Chris Patel", "q2": "chris@example.com", "q3": "Beginner" } },
+    { "id": "3015", "formId": "2002", "submittedAt": "2026-10-18T20:10:00Z", "answers": { "q1": "Nina Torres", "q2": "nina@example.com", "q3": "Some experience" } },
+    { "id": "3016", "formId": "2002", "submittedAt": "2026-10-19T09:00:00Z", "answers": { "q1": "Ben Okafor", "q2": "ben@example.com", "q3": "Beginner" } },
+    { "id": "3017", "formId": "2002", "submittedAt": "2026-10-25T11:45:00Z", "answers": { "q1": "Ivy Chen", "q2": "ivy@example.com", "q3": "Some experience" } },
+    { "id": "3018", "formId": "2004", "submittedAt": "2026-10-23T09:20:00Z", "answers": { "q1": "Biscuit", "q2": 5, "q3": 4, "q4": "Full groom", "q5": "He looks great and was calm." } },
+    { "id": "3019", "formId": "2004", "submittedAt": "2026-10-24T13:05:00Z", "answers": { "q1": "Luna", "q2": 4, "q3": 3, "q4": "Bath", "q5": "" } },
+    { "id": "3020", "formId": "2004", "submittedAt": "2026-10-25T16:30:00Z", "answers": { "q1": "Pepper", "q2": 5, "q3": 5, "q4": "Puppy first visit", "q5": "So gentle with a nervous puppy." } },
+    { "id": "3021", "formId": "2004", "submittedAt": "2026-10-27T10:10:00Z", "answers": { "q1": "Max", "q2": 3, "q3": 2, "q4": "Nail trim", "q5": "Waited 40 minutes." } },
+    { "id": "3022", "formId": "2004", "submittedAt": "2026-10-28T17:55:00Z", "answers": { "q1": "Coco", "q2": 5, "q3": 4, "q4": "Full groom", "q5": "" } }
+  ]
+}

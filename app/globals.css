@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+:root {
+  --bg: #f7f7f8;
+  --card: #ffffff;
+  --ink: #16151d;
+  --muted: #6b6a75;
+  --line: #e4e3ea;
+  --accent: #4b36d9;
+  --zombie: #3f8f3a;
+  --danger: #c2372f;
+  --radius: 10px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { opacity: 0.8; }
+
+.zombie-bar {
+  background: var(--zombie);
+  color: #fff;
+  font-size: 13px;
+  padding: 6px 16px;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px 20px;
+  padding: 14px 24px;
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+.nav .brand { font-weight: 700; font-size: 18px; color: var(--ink); margin-right: auto; }
+
+main { max-width: 1040px; margin: 0 auto; padding: 28px 16px 64px; }
+h1 { font-size: 28px; margin: 0 0 6px; }
+h2 { font-size: 20px; margin: 28px 0 10px; }
+.sub { color: var(--muted); margin: 0 0 24px; }
+
+/* Page header: title and sub line on the left, buttons on the right */
+.page-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+.page-head .sub { margin: 0; }
+.page-head .actions-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.crumb { font-size: 13px; margin-bottom: 8px; display: block; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+.grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.grid-2 { display: grid; gap: 14px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.stack { display: grid; gap: 10px; }
+.spread { justify-content: space-between; }
+
+input, select, textarea {
+  font: inherit;
+  padding: 9px 11px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  width: 100%;
+}
+input[type="checkbox"] { width: auto; }
+input[type="color"] { padding: 2px; height: 40px; width: 64px; }
+label { font-size: 13px; color: var(--muted); display: grid; gap: 4px; }
+label.check { display: flex; align-items: center; gap: 8px; }
+
+button, .btn {
+  font: inherit;
+  font-weight: 600;
+  padding: 9px 16px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+}
+button.ghost, .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+button.small, .btn.small { padding: 5px 10px; font-size: 13px; }
+button.danger { background: transparent; color: var(--danger); border: 1px solid var(--line); }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: var(--radius); overflow: hidden; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); font-size: 14px; vertical-align: top; }
+th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+tr:last-child td { border-bottom: 0; }
+
+/* Tables scroll inside their own wrapper, never the whole page */
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
+.table-wrap table { min-width: 560px; border-radius: 0; }
+
+.pill { display: inline-block; font-size: 12px; padding: 2px 9px; border-radius: 99px; background: #eceaf8; color: var(--accent); }
+.muted { color: var(--muted); }
+.error { color: var(--danger); font-size: 14px; }
+
+/* Stat cards */
+.stat .label { color: var(--muted); font-size: 13px; }
+.big { font-size: 26px; display: block; margin-top: 4px; }
+
+/* Empty state */
+.empty { text-align: center; color: var(--muted); padding: 28px 16px; border: 1px dashed var(--line); border-radius: var(--radius); background: var(--card); }
+
+/* Form cards on the home page */
+.form-card { border-top: 4px solid var(--accent); }
+.form-card .meta { font-size: 13px; color: var(--muted); }
+.swatches { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.swatch { width: 28px; height: 28px; padding: 0; border-radius: 99px; border: 2px solid #fff; box-shadow: 0 0 0 1px var(--line); }
+
+/* Charts, plain CSS */
+.hchart { display: grid; gap: 8px; }
+.hrow { display: grid; grid-template-columns: minmax(70px, 140px) minmax(0, 1fr) 70px; gap: 10px; align-items: center; font-size: 14px; }
+.hrow .htrack { background: #eceaf8; border-radius: 6px; height: 14px; overflow: hidden; }
+.hrow .hfill { background: var(--accent); height: 100%; border-radius: 6px; }
+.hrow .hval { text-align: right; color: var(--muted); font-size: 13px; }
+.vchart { display: flex; gap: 10px; align-items: flex-end; height: 140px; border-bottom: 1px solid var(--line); }
+.vcol { flex: 1; min-width: 0; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; }
+.vcol .vfill { width: 70%; max-width: 48px; min-height: 2px; background: var(--accent); border-radius: 4px 4px 0 0; }
+.vcol .vcount { font-size: 12px; color: var(--muted); margin-bottom: 2px; }
+.vlabels { display: flex; gap: 10px; margin-top: 4px; }
+.vlabels span { flex: 1; text-align: center; font-size: 13px; font-weight: 600; }
+
+/* Public form */
+.public { max-width: 640px; margin: 0 auto; }
+.progress { background: #eceaf8; height: 8px; border-radius: 99px; overflow: hidden; }
+.progress .progress-fill { background: var(--accent); height: 100%; transition: width 0.2s; }
+.question-big { font-size: 20px; font-weight: 600; color: var(--ink); }
+.answer-box { padding: 14px; border: 1px solid var(--line); border-radius: 8px; background: #fafafb; }
+
+@media (max-width: 640px) {
+  .grid-2 { grid-template-columns: minmax(0, 1fr); }
+  .nav { padding: 12px 16px; }
+  h1 { font-size: 24px; }
+  .hrow { grid-template-columns: 80px minmax(0, 1fr) 56px; }
+}
+
+/* Sponsors footer (Prompt Anything x Mel). Manrope is Mel's wordmark font. */
+.sponsors {
+  max-width: 1040px;
+  margin: 24px auto 40px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #0D0B19;
+  color: #fff;
+  border-radius: 20px;
+}
+.sponsors-quill { width: 110px; height: auto; flex-shrink: 0; }
+.sponsors-text { display: grid; gap: 8px; }
+.sponsors-text p { margin: 0; }
+.sponsors-eyebrow { font-size: 13px; color: #BFC0D6; letter-spacing: 0.04em; }
+.sponsors-logos { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.sponsors-pa { display: inline-flex; align-items: center; gap: 8px; color: #fff; font-weight: 700; font-size: 18px; text-decoration: none; }
+.sponsors-pa img { width: 26px; height: auto; }
+.sponsors-x { color: #9B99AD; }
+.sponsors-mel {
+  display: inline-flex; align-items: flex-end; gap: 2px;
+  font: 800 26px/0.8 'Manrope', system-ui, sans-serif; letter-spacing: -1px;
+  color: #fff; text-decoration: none;
+}
+.sponsors-mel::after { content: ""; width: 9px; height: 9px; background: #2F3FF5; margin-bottom: 1px; }
+.sponsors-note { font-size: 14px; color: #D9D7E6; }
+@media (max-width: 560px) {
+  .sponsors { margin: 16px 16px 32px; flex-direction: column; text-align: center; }
+  .sponsors-logos { justify-content: center; }
+}
